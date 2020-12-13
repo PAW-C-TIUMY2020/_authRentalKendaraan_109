@@ -37,8 +37,9 @@ namespace RentalKendaraan
 
             services.AddDbContext<RentKendaraanContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+
             //services.AddDefaultIdentity<IdentityUser>()
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+            //   .AddEntityFrameworkStores<RentKendaraanContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultUI()
